@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sản phẩm</title>
+    <title>Quản lý sản phẩm</title>
 </head>
 <body>
     <?php 
@@ -18,10 +18,6 @@
         // lấy tất cả các cột của sản phẩm, lấy thêm cột tên nsx đổi thành ten_nsx
         $ket_qua = mysqli_query($ket_noi,$sql);
 
-        
-
-
-        
 
     ?>
     <h1>Quản lý sản phẩm</h1>

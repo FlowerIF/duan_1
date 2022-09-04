@@ -8,7 +8,7 @@
     <style>
         #tong{
             width: 100%;
-            height: 830px;
+            height: 800px;
             background: black;
         }
         #tren{
@@ -33,7 +33,7 @@
 
     <div id="tong">
         <?php include 'menu.php'?>
-        <?php include 'contents.php'?>
+        <?php include 'san_pham.php'?>
         <?php include 'footer.php'?>
     </div>
 </body>
