@@ -12,7 +12,9 @@ $ket_qua = mysqli_query($ket_noi,$sql);
 $so_trung = mysqli_fetch_array($ket_qua)['count(*)'];
 
 if($so_trung == 1){
-    header('location:signup_view.php?loi= trùng email rồi , bạn kiểm tra lại đi');
+    session_start();
+    $_SESSION['loi'] = 'trùng email rồi , bạn kiểm tra lại đi';
+    header('location:signup_view.php');
     exit;
 }
 

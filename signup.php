@@ -14,12 +14,10 @@
         <button>đăng ký</button>
     </form>
     <?php
-    $loi ='';
-    $success='';
-    if(isset($_GET['loi']) ){
-        $loi=$_GET['loi'];
+    session_start();
+    if(isset($_SESSION['loi'])){
+        echo $_SESSION['loi'];
+        unset($_SESSION['loi']);
     }
-    echo $loi;
-    
     ?>
 </div>

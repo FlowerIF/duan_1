@@ -1,7 +1,9 @@
 <?php
 session_start();
 if(empty($_SESSION['ma'])){
-    header('location:signin_view.php?loi=đăng nhập đi bạn');
+    $_SESSION['loi'] = 'đăng nhập đi bạn';
+    header('location:signin_view.php');
+    
 }
 
 ?>
@@ -18,6 +20,6 @@ if(empty($_SESSION['ma'])){
     <?php
     echo $_SESSION['ten'];
     ?>
-    <a href="index.php">đăng xuất khỏi trái đất luôn</a>
+    <a href="signout.php">đăng xuất khỏi trái đất luôn</a>
 </body>
 </html>

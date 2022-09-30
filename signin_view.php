@@ -1,3 +1,27 @@
+<?php   
+session_start();
+// neu ton tai cookie ghi nho thi truy van vao lay ma va ten luu lai vao session
+if(isset($_COOKIE['ghi_nho'])){
+    $token = $_COOKIE['ghi_nho'];
+    require 'admin/connect.php';
+    $sql = "select * from khach_hang
+    where token = '$token'
+    limit 1";
+    $ket_qua = mysqli_query($ket_noi,$sql);
+    $number_rows = mysqli_num_rows($ket_qua);
+    if($number_rows == 1){
+        $each = mysqli_fetch_array($ket_qua);
+        $_SESSION['ma'] = $each['ma'];
+        $_SESSION['ten'] = $each['ten'];
+    }
+}
+
+
+if(isset($_SESSION['ma'])){
+    header('location:user.php');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
