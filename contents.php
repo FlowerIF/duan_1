@@ -21,7 +21,7 @@ $ket_qua = mysqli_query($ket_noi,$sql);
         <div class="tung_san_pham">
             <p><?php echo $each['ten'] ?></p>
             <img src="admin/san_pham/photo/<?php echo $each['anh']?>" alt="" height="100">
-            <span>new comment</span>
+            
             <p><?php echo $each['gia'] ?> lit</p>
             <a href="view_san_pham.php?ma=<?php echo $each['ma']?>">xem thêm >>>>></a>
         </div>
